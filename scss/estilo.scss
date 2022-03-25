@@ -32,7 +32,9 @@ body{
         display: inline-block;
         width: 25%;
         position: relative;
-        font-size: 1rem;
+        color: $fondohov;
+        background-color: black;
+        font-size: 1.5rem;
         text-align: center;
         a{
             display: block;
@@ -164,6 +166,15 @@ footer{
     color: white;
 }
 @media screen and (min-width: 900px){
+    .menu ul li{
+        display: inline-block;
+        width: 25%;
+        position: relative;
+        color: $fondohov;
+        background-color: black;
+        font-size: 2rem;
+        text-align: center;
+    }
     .menu ul li a{
         color: white;
         background-color: black;
@@ -173,6 +184,15 @@ footer{
     }
 }
 @media screen and (min-width: 700px){
+    .menu ul li{
+        display: inline-block;
+        width: 25%;
+        position: relative;
+        color: $fondohov;
+        background-color: black;
+        font-size: 1.5rem;
+        text-align: center;
+    }
     .menu ul li a{
         color: white;
         background-color: black;
@@ -190,6 +210,15 @@ footer{
 
 }
 @media screen and (min-width: 500px){
+    .menu ul li{
+        display: inline-block;
+        width: 25%;
+        position: relative;
+        color: $fondohov;
+        background-color: black;
+        font-size: 1.3rem;
+        text-align: center;
+    }
     .menu ul li a{
         color: white;
         background-color: black;
