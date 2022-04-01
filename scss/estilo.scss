@@ -1,5 +1,17 @@
+$esthov:(
+    fondo: #ffffff,
+    color: #000000
+);
+$estnorm:(
+    fondo: #000000,
+    color: #ffffff,
+);
 $fondohov:#ffffff;
 $letrahov:#000000;
+@mixin flexcenter() {
+    display: flex;
+    justify-content: center;    
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +20,7 @@ $letrahov:#000000;
 body{
     font-family: 'Teko', sans-serif;
     font-size: 1.5rem;
-    background-color: #ffffff;
+    background-color: map-get($esthov,fondo);
 }
 .logo{
     padding-top: 00.5rem;
@@ -26,24 +38,24 @@ body{
     display: flex;
     padding: 0;
     justify-content: space-evenly;
-    background-color: #000000;
+    background-color: map-get($estnorm,fondo);
     z-index: 1;
     li{
         display: inline-block;
         width: 25%;
         position: relative;
-        color: $fondohov;
-        background-color: black;
+        color: map-get($estnorm,color);
+        background-color: map-get($estnorm,fondo);
         font-size: 1.5rem;
         text-align: center;
         a{
             display: block;
             width: 100%;
-            color: $fondohov;
-            background-color: black;
+            color: map-get($estnorm,color);
+            background-color: map-get($estnorm,fondo);
             text-decoration: none;
             text-align: center;
-            z-index: 1;
+            z-index: 2;
         }
     }
 }
@@ -61,30 +73,33 @@ body{
     z-index: 1;
 }
 .menu ul li:hover{
-    background-color: $fondohov;
-    color: $letrahov;
+    background-color: map-get($esthov,fondo);
+    color: map-get($esthov,color);
 }
 .menu ul li:hover > a{
-    background-color: $fondohov;
-    color: $letrahov;
+    background-color: map-get($esthov,fondo);
+    color: map-get($esthov,color);
 }
 .menu ul li:hover ul{
     display: block;
+    z-index: 1;
+}
+.menu ul ul:hover{
+    display: block;
+    z-index: 1;
 }
 .menu ul ul li:hover{
-    background-color: $fondohov;
+    background-color: map-get($esthov,fondo);
 }
 .publicidad{
-    z-index: 0;
+    z-index: -1;
     height: auto;
-    display: flex;
-    justify-content: center;
+    @include flexcenter();
 }
 .busqueda{
     padding: 1rem;
-    display: flex;
+    @include flexcenter();
     flex-direction: row;
-    justify-content: center;
 }
 .busqueda input[type=text]{
     padding-left: 00.5rem;
@@ -98,8 +113,7 @@ body{
 }
 .relacionados p{
     font-size: 1.8rem;
-    display: flex;
-    justify-content: center;
+    @include flexcenter();
 }
 .contrel{
     display: flex;
@@ -137,12 +151,10 @@ body{
 footer{
     padding-top: 1rem;
     margin: 0%;
-    display: flex;
-    justify-content: center;
+    @include flexcenter();
 }
 .formulario{
-    display: flex;
-    justify-content: center;
+    @include flexcenter();
 }
 .conform{
     padding-top: 1rem;
