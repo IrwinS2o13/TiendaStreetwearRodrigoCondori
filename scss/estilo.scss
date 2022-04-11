@@ -101,11 +101,13 @@ body{
     @include flexcenter();
     flex-direction: row;
 }
-.busqueda > input[type=text]{
-    padding-left: 00.5rem;
-    border: 10px #000000;
-    font-size: 1.5rem;
-    height: 2rem;
+.buscar{
+    border: 2px solid black;
+    border-radius: 5px;
+    height: auto;
+    width: 50%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
 }
 .relacionados {
     display: flex;
@@ -194,6 +196,18 @@ footer{
         text-align: center;
         font-size: 2rem;
     }
+    .infor{
+        width: 70%;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+    
+    }
     
 }
 @media screen and (min-width: 700px){
@@ -220,6 +234,18 @@ footer{
         display: flex;
         justify-content: center;
         text-align: center;
+    }
+    .infor{
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+    
     }
 
 }
@@ -260,6 +286,18 @@ footer{
         display: flex;
         justify-content: center;
         text-align: center;
+    }
+    .infor{
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.5rem;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: center;
+    
     }
 
 }
