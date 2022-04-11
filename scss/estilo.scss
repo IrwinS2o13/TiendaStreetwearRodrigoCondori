@@ -101,9 +101,9 @@ body{
     @include flexcenter();
     flex-direction: row;
 }
-.busqueda input[type=text]{
+.busqueda > input[type=text]{
     padding-left: 00.5rem;
-    border: none;
+    border: 10px #000000;
     font-size: 1.5rem;
     height: 2rem;
 }
@@ -194,6 +194,7 @@ footer{
         text-align: center;
         font-size: 2rem;
     }
+    
 }
 @media screen and (min-width: 700px){
     .menu ul li{
@@ -212,6 +213,7 @@ footer{
         text-align: center;
         font-size: 1.5rem;
     }
+    
     footer{
         padding-top: 1rem;
         font-size: 0.5rem;
@@ -221,7 +223,7 @@ footer{
     }
 
 }
-@media screen and (min-width: 500px){
+@media screen and (max-width: 575px){
     .menu ul li{
         display: inline-block;
         width: 25%;
@@ -238,6 +240,20 @@ footer{
         text-align: center;
         font-size: 1.3rem;
     }
+    .resultado {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        align-items: center; }
+      
+    .resultado p {
+        font-size: 1.8rem;
+        text-align: center; }
+      
+    .resultado > img {
+        width: 80%;
+        height: auto; }
     footer{
         padding-top: 1rem;
         font-size: 0.5rem;
